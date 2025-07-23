@@ -9,9 +9,8 @@ dt = 1.0e-2
 timeStepper = tombo2
 subCyclingSteps = 0
 
-writeControl = simulationTime 
+writeControl = simulationTime
 writeInterval = 20
-outputFormat = vtk
 
 regularization = hpfrt + nModes=1 + scalingCoeff=10
 constFlowRate = meanVelocity=1.0 + direction=Z
@@ -28,3 +27,7 @@ residualTol = 1e-06
 [CASEDATA]
 Re_tau = 550
 zLength = 6
+
+[IO]
+vtk = true
+variable = U,P
